@@ -1,0 +1,236 @@
+/* Container styling */
+.admin-dashboard-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding:20px;
+    font-family: Arial, sans-serif;
+    color: #333;
+  }
+  
+  /* Dashboard header */
+  .admin-dashboard-container h1 {
+   margin-top: 10px;
+    font-size: 15px;
+  }
+  .class{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+  /* Icon Controls */
+  .icon-controls {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+ 
+  }
+  
+  .plus-icon, .bar-icon {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+    padding: 3px 6px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .plus-icon {
+    background-color: #28a745;
+  }
+  
+  .plus-icon:hover {
+    background-color: #218838;
+  }
+  
+  .bar-icon {
+   
+    border: 1px solid #a7a4a4;
+  }
+  
+ 
+  
+  .plus-icon span  {
+    color: #fff;
+    font-weight: lighter;
+    font-size: 13px;
+  }
+  
+  /* Navigation styling */
+  .admin-dashboard-nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 30px;
+  }
+  
+  .admin-dashboard-nav a {
+    text-decoration: none;
+    padding: 10px 20px;
+  
+    border-radius: 5px;
+    background-color: #28a745;
+    color: #fff;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .admin-dashboard-nav a:hover {
+    background-color: #218838;
+    color: #fff;
+  }
+  
+  /* Student Form container styling */
+  .student-form-container {
+    margin-bottom: 20px;
+    background-color: #f1f1f1;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Students section styling */
+  .students-section {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+  }
+  
+  .students-section h2 {
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  
+  /* Table responsive container */
+  .table-responsive {
+    overflow-x: auto;
+  }
+  
+  /* Table styling */
+  .students-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .students-table th,
+  .students-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+    font-size: 14px;
+  }
+  
+  .students-table th {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .students-table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  .students-table tbody tr:hover {
+    background-color: #e6f7ff;
+  }
+  
+  /* Button styling */
+  .assign-btn {
+    background-color: #28a745;
+    color: white;
+    padding: 5px 10px;
+    margin: 2px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .assign-btn:hover {
+    background-color: #218838;
+  }
+  
+  .delete-btn {
+    background-color: #dc3545;
+    color: white;
+    padding: 5px 10px;
+    margin: 2px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .delete-btn:hover {
+    background-color: #c82333;
+  }
+  
+  /* Responsive styling for tablets */
+  @media (max-width: 768px) {
+    .admin-dashboard-container {
+      padding: 10px;
+    }
+  
+    .admin-dashboard-container h1 {
+      font-size: 1.5rem;
+    }
+  
+    .icon-controls {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .admin-dashboard-nav {
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+  
+    .admin-dashboard-nav a {
+      padding: 8px 15px;
+      font-size: 14px;
+    }
+  
+    .student-form-container, .students-section {
+      padding: 15px;
+    }
+  
+    .students-table th,
+    .students-table td {
+      padding: 8px;
+      font-size: 13px;
+    }
+  }
+  
+  /* Responsive styling for mobile */
+  @media (max-width: 480px) {
+    .admin-dashboard-container h1 {
+      font-size: 1.2rem;
+    }
+  
+    .icon-controls {
+      gap: 5px;
+    }
+  
+    .plus-icon, .bar-icon {
+      padding: 5px;
+    }
+  
+    .admin-dashboard-nav a {
+      padding: 6px 10px;
+      font-size: 12px;
+    }
+  
+    .student-form-container, .students-section {
+      padding: 10px;
+    }
+  
+    .students-table th,
+    .students-table td {
+      padding: 6px;
+      font-size: 11px;
+    }
+  }
+  

@@ -1,0 +1,189 @@
+/* Default Navbar Styling */
+.header-section {
+    background-color: #388e3c;
+    color: white;
+    padding: 2px;
+    /* position: fixed; */
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    
+}
+
+/* Flexbox styling for header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 35px;
+    transition: padding 0.3s ease;
+}
+
+h5 {
+    font-size: 1rem;
+}
+
+/* Logo styling */
+.header-section .logo {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+header img {
+   width: 30px;
+}
+
+header h2 {
+    font-size: 1rem; /* Increased for better visibility */
+    margin-left: 20px;
+  
+}
+
+/* Hamburger Menu (Hidden by default) */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.hamburger .line {
+    height: 5px;
+    background-color: white;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.hamburger .line.open:nth-child(1) {
+    transform: rotate(45deg);
+    position: relative;
+    top: 8px;
+}
+
+.hamburger .line.open:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger .line.open:nth-child(3) {
+    transform: rotate(-45deg);
+    position: relative;
+    top: -8px;
+}
+
+/* Navbar links styling */
+nav {
+    display: flex;
+    justify-content: space-between; 
+   align-items: center;
+}
+
+nav a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    padding: 8px 18px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+h3{
+    font-size: 14px;
+    font-weight: lighter;
+}
+
+nav a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px); /* Added hover effect to lift links slightly */
+}
+
+nav a span {
+    font-size: 1rem;
+    margin-right: 5px;
+}
+.icons{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+/* Logout Button Styling */
+.logout {
+    background-color: #d32f2f;
+    border-radius: 8px;
+    padding: 5px 7px;
+    margin-left: 20px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Mobile View Styling */
+@media (max-width: 1000px) {
+    /* Adjust logo size for mobile */
+    .logo h2 {
+        font-size: 18px;
+    }
+
+    /* Hide the navbar links by default */
+    nav {
+        display: none;
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+    }
+
+    /* Show the hamburger icon */
+    .hamburger {
+        display: flex;
+    }
+
+    /* Toggle navbar links visibility when menu is open */
+    .nav-links.open {
+        display: flex;
+    }
+
+    /* Adjust logo text and spacing */
+    header h2 {
+        font-size: 1.4rem;
+        text-align: center;
+    }
+
+    h5 {
+        text-align: center;
+    }
+
+    nav a {
+        font-size: 1rem; /* Slightly larger font size */
+        padding: 12px 20px; /* Increased padding for tap targets */
+    }
+}
+
+/* Tablet View Styling */
+@media (max-width: 1024px) {
+    /* Adjust font sizes for medium screens */
+    header h2 {
+        font-size: 1rem;
+    }
+}
+
+/* Desktop View (Large screens) */
+@media (min-width: 1025px) {
+    /* header {
+        padding: 20px 40px;
+    } */
+/* 
+    .logo {
+        margin-right: 20px;
+    } */
+
+    nav {
+        display: flex;
+        gap: 30px;
+    }
+
+    nav a {
+        font-size: 1rem; /* Improved font size */
+        padding: 10px 20px;
+    }
+}

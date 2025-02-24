@@ -1,0 +1,136 @@
+/* General container styling */
+.dashboard-container {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.dashboard-title {
+  color: #333;
+  text-align: center;
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+/* Classroom card styling */
+.classroom-card {
+  padding:0 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.classroom-name {
+  color: #2c3e50;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+/* Classroom details */
+.class-details {
+ display: flex;
+ align-items: center;
+ background-color: #eee;
+ padding: 5px;
+}
+.class-detail{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap:20px
+}
+/* Classroom image */
+.class-details img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 15px;
+}
+
+/* Classroom title */
+.class-details h3 {
+  font-size: 20px;
+  color: #333;
+  margin: 5px 0;
+}
+
+/* Classroom description */
+.class-details p {
+  font-size: 16px;
+  color: #666;
+  margin: 0;
+}
+
+/* Responsive Table */
+.students-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+/* Make table scrollable on smaller screens */
+.students-table-wrapper {
+  overflow-x: auto;
+}
+
+.students-table th {
+  background-color: green;
+  color: white;
+  padding: 10px;
+  text-align: left;
+  font-size: 16px;
+}
+
+.students-table td {
+  padding: 8px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+}
+
+/* Loading, error, and empty states */
+.loading-text, 
+.error-text, 
+.no-students-text, 
+.no-classrooms-text {
+  text-align: center;
+  font-weight: bold;
+  color: red;
+  font-size: 14px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .dashboard-container {
+    padding: 10px;
+  }
+
+  .dashboard-title {
+    font-size: 18px;
+  }
+
+  .classroom-card {
+    padding: 10px;
+  }
+
+  .students-table th,
+  .students-table td {
+    font-size: 13px;
+    padding: 6px;
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboard-title {
+    font-size: 16px;
+  }
+
+  .classroom-name {
+    font-size: 15px;
+  }
+
+  .students-table th,
+  .students-table td {
+    font-size: 12px;
+    padding: 5px;
+  }
+}

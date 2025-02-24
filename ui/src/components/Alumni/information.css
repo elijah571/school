@@ -1,0 +1,125 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 50px;  /* Reduced gap for a balanced look */
+    text-align: center;
+    padding: 30px;
+    background-color: #388e3c;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    width: 95%;
+  
+    margin: 40px auto;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.info img {
+    width: 200px; /* Reduced slightly for better proportion */
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    mix-blend-mode: multiply; /* Removes white background effect */
+}
+
+h1 {
+    font-size: 28px;
+    color: #fff;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    margin: 10px 0;
+    max-width: 300px;
+}
+
+.container .logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container .logo img {
+    width: 90px;
+    height: auto;
+    margin-bottom: 10px;
+    mix-blend-mode: multiply;
+    filter: drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.2)); /* Adds slight shadow */
+}
+
+h2 {
+    font-size: 22px;
+    color: #fff;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        gap: 30px;
+        padding: 20px;
+    }
+
+    .info img {
+        width: 180px;
+        height: 180px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .container .logo img {
+        width: 80px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+}
+
+.alumni-profile {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .alumni-profile h4, 
+  .alumni-profile h3, 
+  .alumni-profile h2 {
+    color: #2c3e50;
+  }
+  
+  .alumni-profile p {
+    font-size: 16px;
+    color: #555;
+  }
+  
+  .achievements ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .achievements li {
+    margin: 10px 0;
+    font-size: 16px;
+  }
+  
+  .achievements strong {
+    color: #34495e;
+  }
+  
+  .achievements span {
+    display: block;
+    margin-top: 5px;
+    color: #666;
+  }
+  

@@ -1,0 +1,60 @@
+.student-details-container {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  h2, h3 {
+    text-align: center;
+    color: #333;
+  }
+  
+  .student-report {
+    margin-top: 20px;
+  }
+  
+  .report-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .report-table th, .report-table td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+  }
+  
+  .report-table th {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  .report-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  .report-table tr:hover {
+    background-color: #ddd;
+  }
+  
+  .report-table td {
+    font-size: 14px;
+    color: #555;
+  }
+  
+  .report-table td:nth-child(5) {
+    font-weight: bold;
+    color: #000;
+  }
+  
+  .report-table td, .report-table th {
+    padding: 8px 15px;
+  }
+  
+  h4 {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 16px;
+    color: #444;
+  }
+  
