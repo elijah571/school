@@ -20,12 +20,21 @@ export const StudentDetails = () => {
     <div className="student-details-container">
       <h2>Student Details</h2>
       {student ? (
-        <div>
-          <p><strong>Name:</strong> {student.fullName}</p>
-          <p><strong>Gender:</strong> {student.gender}</p>
-          <p><strong>Date of Birth:</strong> {formatDate(student.DOB)}</p>
-          <p><strong>Parent:</strong> {student.parent}</p>
-          <p><strong>Phone:</strong> {student.phone}</p>
+        <div className="student-details">
+          <div>
+          <h6> {student.fullName}</h6>
+
+          </div>
+          <div className="student-info">
+          <p><span>Class</span>SS3A</p>
+          <p><span>Gender</span> {student.gender}</p>
+          <p><span>Date of Birth</span> {formatDate(student.DOB)}</p>
+          <p><span>Student ID</span> {student._id}</p>
+          <p><span>Academic Year</span> 2024/2025</p>
+          <p><span>Parent</span> {student.parent}</p>
+          <p><span>Parent Contact</span> {student.phone}</p>
+          </div>
+          
         </div>
       ) : (
         <p>No details available</p>

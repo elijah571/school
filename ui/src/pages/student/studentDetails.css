@@ -1,60 +1,59 @@
-.student-details-container {
-    padding: 20px;
-    font-family: Arial, sans-serif;
+.student-details {
+  padding: 10px 5px;
+  background-color: #eeee;
+  border-radius: 14px;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.student-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4px;
+  gap: 5px;
+}
+
+p {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3px;
+  text-align: center;
+  font-weight: bolder;
+  font-size: 13px;
+  gap: 5px;
+  min-width: 100px;
+  flex: 1;
+}
+
+span {
+  font-weight: lighter;
+  margin-top: 4px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .student-info {
+    flex-direction: column;
+    align-items: center;
   }
-  
-  h2, h3 {
-    text-align: center;
-    color: #333;
+
+  p {
+    font-size: 0.9rem;
   }
-  
-  .student-report {
-    margin-top: 20px;
+}
+
+@media (max-width: 480px) {
+  .student-details {
+    padding: 8px 10px;
   }
-  
-  .report-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
+
+  .student-info {
+    gap: 5px;
   }
-  
-  .report-table th, .report-table td {
-    padding: 12px;
-    text-align: left;
-    border: 1px solid #ddd;
+
+  p {
+    font-size: 0.8rem;
   }
-  
-  .report-table th {
-    background-color: #4CAF50;
-    color: white;
-  }
-  
-  .report-table tr:nth-child(even) {
-    background-color: #f2f2f2;
-  }
-  
-  .report-table tr:hover {
-    background-color: #ddd;
-  }
-  
-  .report-table td {
-    font-size: 14px;
-    color: #555;
-  }
-  
-  .report-table td:nth-child(5) {
-    font-weight: bold;
-    color: #000;
-  }
-  
-  .report-table td, .report-table th {
-    padding: 8px 15px;
-  }
-  
-  h4 {
-    margin-top: 15px;
-    text-align: center;
-    font-size: 16px;
-    color: #444;
-  }
-  
+}

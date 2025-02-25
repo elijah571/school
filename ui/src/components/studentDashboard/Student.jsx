@@ -12,6 +12,7 @@ export const Student = () => {
     const date = new Date(dateString);
     return date.toLocaleDateString("en-GB");
   };
+  
 
   // Calculate total score for each subject list (firstCA, secondCA, exam)
   const calculateTotal = (subjects) => {
