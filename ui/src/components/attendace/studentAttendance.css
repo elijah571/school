@@ -11,18 +11,33 @@
     gap: 10px;
     height: 100%;
 }
-.attndace-performace, .total-classes, .present, .absent {
+
+.attndace-performace, 
+.total-classes, 
+.present, 
+.absent {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 5px;
     color: #fff;
     border-radius: 8px;
+    /* padding: 10px 40px; */
     transition: all 0.3s;
 }
-.attndace-performace, .total-classes, .present, .absent: :hover{
-
+h5{
+    font-size: 15px;
 }
+/* Hover effect */
+.attndace-performace:hover, 
+.total-classes:hover, 
+.present:hover, 
+.absent:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  
+}
+
 .attndace-performace{
     background-color:#333;
     

@@ -1,60 +1,197 @@
+.student-report-container{
+  margin-top: 30px;
+}
+/* Container Styles */
+.report-summary {
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+  border-radius: 8px; 
+  margin-bottom: 30px;
+  margin-top: 30px;
+  padding: 14px 8px;
+}
+
+.report-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+}
+
+/* Card Styles */
+.report-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 5px;
+  color: #fff;
+  border-radius: 8px;
+  transition: all 0.3s;
+}
+
+.report-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Specific Card Colors */
+.grade-scale-card {
+  background-color: #333;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.grade-scale-card h6 {
+  font-size: 12px;
+}
+.grade-scale-card > div {
+  font-size: 12px;
+}
+.total-subjects-card {
+  background-color: rgb(8, 163, 163);
+}
+
+.total-passed-card {
+  background-color: green;
+}
+
+.failed-card {
+  background-color: red;
+}
+
+/* Grade Scale Details */
+.grade-details {
+  display: flex;
+  gap: 10px;
+}
+.grade-details > div {
+  padding: 5px 0;
+}
+
+/* Icon Styles */
+.icon-container {
+  background-color: #fff;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.icon-style {
+  color: aqua;
+}
+
+.total-subjects-card .icon-style {
+  color: rgb(8, 163, 163);
+}
+
+.total-passed-card .icon-style {
+  color: green;
+}
+
+.failed-card .icon-style {
+  color: red;
+}
+
+/* Text Styles */
+h5 {
+  font-size: 15px;
+}
+
+.report-value {
+  color: #fff;
+  text-align: left;
+  margin-top: 10px;
+}
+
 .student-details-container {
-    padding: 20px;
-    font-family: Arial, sans-serif;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+h2, h3 {
+  text-align: center;
+  color: #333;
+}
+
+.student-report {
+  margin-top: 20px;
+}
+
+.report-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.report-table th, .report-table td {
+  padding: 12px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+.report-table th {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.report-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.report-table tr:hover {
+  background-color: #ddd;
+}
+
+.report-table td {
+  font-size: 14px;
+  color: #555;
+}
+
+.report-table td:nth-child(5) {
+  font-weight: bold;
+  color: #000;
+}
+
+.report-table td, .report-table th {
+  padding: 8px 15px;
+}
+
+h4 {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 16px;
+  color: #444;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .report-cards {
+    grid-template-columns: 1fr;
   }
-  
-  h2, h3 {
-    text-align: center;
-    color: #333;
+
+  .report-card {
+    flex-direction: row;
+    align-items: center;
   }
-  
-  .student-report {
-    margin-top: 20px;
+}
+
+@media (max-width: 480px) {
+  .report-cards {
+    grid-template-columns: 1fr;
   }
-  
-  .report-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
+
+  .report-card {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
   }
-  
-  .report-table th, .report-table td {
-    padding: 12px;
-    text-align: left;
-    border: 1px solid #ddd;
+
+  .subject-text {
+    font-size: 12px;
   }
-  
-  .report-table th {
-    background-color: #4CAF50;
-    color: white;
+
+  .icon-style {
+    font-size: 18px;
   }
-  
-  .report-table tr:nth-child(even) {
-    background-color: #f2f2f2;
-  }
-  
-  .report-table tr:hover {
-    background-color: #ddd;
-  }
-  
-  .report-table td {
-    font-size: 14px;
-    color: #555;
-  }
-  
-  .report-table td:nth-child(5) {
-    font-weight: bold;
-    color: #000;
-  }
-  
-  .report-table td, .report-table th {
-    padding: 8px 15px;
-  }
-  
-  h4 {
-    margin-top: 15px;
-    text-align: center;
-    font-size: 16px;
-    color: #444;
-  }
-  
+}
