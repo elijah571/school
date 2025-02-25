@@ -1,0 +1,99 @@
+.attendance-summary {
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    margin-bottom: 30px;
+    padding: 14px 8px;
+    width: 100%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+}
+
+.attendace-div {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+    height: 100%;
+}
+
+.attndace-performace,
+.total-classes,
+.present,
+.absent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5px;
+    color: #fff;
+    border-radius: 8px;
+    min-width: 150px;
+}
+
+h5 {
+    font-size: 15px;
+}
+
+.attndace-performace {
+    background-color: #333;
+}
+
+.attndace-performace > div,
+.total-classes > div,
+.present > div,
+.absent > div {
+    padding: 10px;
+}
+
+.punctual {
+    color: #fff;
+    text-align: left;
+    margin-top: 10px;
+}
+
+.total-classes {
+    background-color: rgb(8, 163, 163);
+}
+
+.clock {
+    background-color: #fff;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.calender {
+    color: aqua;
+}
+
+.present {
+    background-color: green;
+}
+
+.present .calender {
+    color: green;
+}
+
+.absent {
+    background-color: red;
+}
+
+.absent .calender {
+    color: red;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .attendace-div {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .attendace-div {
+        grid-template-columns: 1fr;
+    }
+}

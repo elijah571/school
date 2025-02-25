@@ -1,6 +1,8 @@
 import { useParams, useLocation } from "react-router-dom";
 import { useGetStudentAttendanceQuery } from "../../redux/api/attendanceSlice"; 
+import { FaCalendar } from 'react-icons/fa';
 import "./studentAttendance.css";
+import { CycleProgress } from "../CycleProgress";
 
 export const GetStudentAttendance = () => {
   const { id: studentId } = useParams(); // Extract studentId from the URL params
@@ -25,6 +27,57 @@ export const GetStudentAttendance = () => {
 
   return (
     <div className="attendance-container">
+      <div className="attendace-summary">
+        <h6>Attendace Summary</h6>
+        <div className="attendace-div">
+             {/* attendace performance */}
+        <div className="attndace-performace">
+          <div>
+            <h5>Attenadce Performance</h5>
+            <small className="punctual">Punctual</small>
+          </div>
+          <CycleProgress/>
+        </div>
+        {/* total classes */}
+        <div className="total-classes">
+        <div>
+            <h5>Total classes</h5>
+            <small className="punctual">200</small>
+          </div>
+          <div className="clock">
+          <FaCalendar className="calender"/>
+
+          </div>
+        </div>
+        {/* present */}
+        <div>
+        <div className="present">
+        <div>
+            <h5>Present</h5>
+            <small className="punctual">190</small>
+          </div>
+          <div className="clock">
+          <FaCalendar className="calender"/>
+
+          </div>
+        </div>
+        </div>
+        {/* absesnt */}
+        <div>
+        <div className="absent">
+        <div>
+            <h5>Absent</h5>
+            <small className="punctual">5</small>
+          </div>
+          <div className="clock">
+          <FaCalendar className="calender"/>
+
+          </div>
+        </div>
+        </div>
+        </div>
+     
+      </div>
       <table className="attendance-table">
         <thead>
           <tr>

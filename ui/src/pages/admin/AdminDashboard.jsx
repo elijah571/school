@@ -8,7 +8,7 @@ import { FaBars } from 'react-icons/fa';
 import { useGetTeachersQuery } from '../../redux/api/teacherSlice';
 import TeacherForm from '../../components/teachersDashboard/TeachersForm';
 import { useGetAllClassroomsQuery } from "../../redux/api/classRoomSlice";
-
+import { useNavigate } from 'react-router-dom';
 const AdminDashboard = () => {
   const { userInfo } = useSelector((state) => state.auth);
 
@@ -67,7 +67,10 @@ const AdminDashboard = () => {
   // Total Classes
   const totalClasses = classroomData?.classrooms?.length || 0;
 
-  
+  const navigate = useNavigate()
+  const handleStudentClick = (studentId, classroomId) => {
+    navigate(`/student/${studentId}/attendance?classroom=${classroomId}`); // Navigate to attendance page
+  };
   return (
     <div className="admin-dashboard-container">
       <h1>Admin Dashboard</h1>
@@ -224,7 +227,7 @@ const AdminDashboard = () => {
         </thead>
         <tbody>
           {classroom.students.map((student) => (
-            <tr key={student._id}>
+               <tr key={student._id} onClick={() => handleStudentClick(student._id, classroom._id)}>
               {/* <td>
                 <img src={student.image} alt={student.fullName} width="50" />
               </td> */}
