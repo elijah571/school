@@ -9,9 +9,6 @@ import CreateClassroom from "./components/dashboard/classroom/CreateClassroom";
 import AssignTeacher from "./components/dashboard/assignTeacher/AssignTeacher";
 import AssignStudents from "./components/dashboard/student/assignStudent";
 import { GetAllAttendance } from "./components/attendace/GetAllAttendance";
-import { Alunmi } from "./pages/alunmi/Alunmi";
-import { News } from "./pages/news/News";
-import { AlumniBodies } from "./pages/alunmi/AlumniBodies";
 import { StudentDetails } from "./pages/student/StudentDetails";
 import { GetStudentAttendance } from "./components/attendace/GetStudentAttendace";
 
@@ -22,11 +19,11 @@ const App = () => {
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/" element={<Dashboard />} />
         <Route path="/reports" element={<Report />} />
-        <Route path="/alumni" element={<Alunmi />} />
+        
         <Route path="/login" element={<Login />} />
         <Route path="/attendance" element={<GetAllAttendance />} />
-        <Route path="/news" element={<News />} />
-        <Route path="/alumni-bodies" element={<AlumniBodies />} />
+        
+       
 
         {/* Student Routes with Nested Navigation */}
         <Route path="/student/:id" element={<StudentDetails />}>

@@ -19,7 +19,7 @@ export const Student = () => {
     if (!subjects || subjects.length === 0) return 0;
     return subjects.reduce((total, subject) => total + (subject.score || 0), 0); // Adjust "score" property based on your data structure
   };
-
+  
   // Log the data for debugging purposes
   console.log("Student Report Data: ", studentReport);
 
@@ -27,6 +27,7 @@ export const Student = () => {
   if (reportError) return <p>Error loading report.</p>;
 
   return (
+
     <div className="student-report-container">
       {studentReport && studentReport.report ? (
         <div className="student-report">
@@ -35,9 +36,9 @@ export const Student = () => {
             <thead>
               <tr>
                 <th>Subject</th>
-                <th>First CA</th>
-                <th>Second CA</th>
-                <th>Exam</th>
+                <th>First CA (20 marks) </th>
+                <th>Second CA (20 marks)</th>
+                <th>Exam (60 marks)</th>
                 <th>Total</th>
               </tr>
             </thead>

@@ -9,9 +9,6 @@ export const GetStudentAttendance = () => {
   const { search } = useLocation(); // Extract query string
   const classroomId = new URLSearchParams(search).get("classroom"); // Extract classroomId
 
-  console.log("Student ID:", studentId);
-  console.log("Classroom ID:", classroomId);
-
   const { data: attendanceData, isLoading, isError } = useGetStudentAttendanceQuery({ studentId, classroomId });
 
   console.log("Attendance Data:", attendanceData);
@@ -50,7 +47,7 @@ export const GetStudentAttendance = () => {
           </div>
         </div>
         {/* present */}
-        <div>
+        
         <div className="present">
         <div>
             <h5>Present</h5>
@@ -61,9 +58,9 @@ export const GetStudentAttendance = () => {
 
           </div>
         </div>
-        </div>
+        
         {/* absesnt */}
-        <div>
+        
         <div className="absent">
         <div>
             <h5>Absent</h5>
@@ -74,7 +71,7 @@ export const GetStudentAttendance = () => {
 
           </div>
         </div>
-        </div>
+        
         </div>
      
       </div>
