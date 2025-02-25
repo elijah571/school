@@ -1,0 +1,65 @@
+/* teacherDetails.css */
+.teacher-details-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    font-family: Arial, sans-serif;
+}
+
+.teacher-title {
+    text-align: center;
+    color: #333;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.loading-text,
+.error-text,
+.no-teacher-text {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #888;
+}
+
+.error-text {
+    color: #d9534f;
+}
+
+.no-teacher-text {
+    color: #5bc0de;
+}
+
+.teacher-details-table-wrapper {
+    overflow-x: auto;
+}
+
+.teacher-details-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.teacher-details-table th,
+.teacher-details-table td {
+    text-align: left;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+}
+
+.teacher-details-table th {
+    background-color: green;
+    color: #fff;
+    font-weight: bold;
+}
+
+.teacher-details-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.teacher-details-table tr:hover {
+    background-color: #e0e0e0;
+    transition: background-color 0.3s ease;
+}

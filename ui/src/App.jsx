@@ -11,6 +11,7 @@ import AssignStudents from "./components/dashboard/student/assignStudent";
 import { GetAllAttendance } from "./components/attendace/GetAllAttendance";
 import { StudentDetails } from "./pages/student/StudentDetails";
 import { GetStudentAttendance } from "./components/attendace/GetStudentAttendace";
+import { TeacherDetails } from "./components/teacher/TeacherDetails";
 
 const App = () => {
   return (
@@ -19,15 +20,15 @@ const App = () => {
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/" element={<Dashboard />} />
         <Route path="/reports" element={<Report />} />
-        
         <Route path="/login" element={<Login />} />
         <Route path="/attendance" element={<GetAllAttendance />} />
-        
-       
+
+        {/* Teacher Routes */}
+        <Route path="/teachers/:id" element={<TeacherDetails />} />
 
         {/* Student Routes with Nested Navigation */}
         <Route path="/student/:id" element={<StudentDetails />}>
-          <Route index element={<Report />} /> {/* Default to student report */}
+          <Route index element={<Report />} /> 
           <Route path="attendance" element={<GetStudentAttendance />} />
         </Route>
 

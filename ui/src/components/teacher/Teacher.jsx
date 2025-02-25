@@ -1,7 +1,10 @@
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { useGetAllClassroomsQuery } from "../../redux/api/classRoomSlice";
 import './teacher.css';
 
 export const Teacher = () => {
+    const navigate = useNavigate();
     const { data: classrooms, isLoading, isError } = useGetAllClassroomsQuery();
 
     // Ensure classroomsData is always an array
@@ -13,6 +16,11 @@ export const Teacher = () => {
             ? classroom.teachers.map(teacher => ({ ...teacher, classroomName: classroom.name })) 
             : []
     );
+
+    // Handler to navigate to teacher details
+    const handleTeacherClick = (teacherId) => {
+        navigate(`/teachers/${teacherId}`);
+    };
 
     return (
         <div className="teacher-container">
@@ -36,7 +44,12 @@ export const Teacher = () => {
                         <tbody>
                             {teachersData.map((teacher) => (
                                 <tr key={teacher._id}>
-                                    <td>{teacher.fullName}</td>
+                                    <td 
+                                        className="teacher-name-link" 
+                                        onClick={() => handleTeacherClick(teacher._id)}
+                                    >
+                                        {teacher.fullName}
+                                    </td>
                                     <td>{teacher.subject || 'N/A'}</td>
                                     <td>{teacher.email || 'N/A'}</td>
                                     <td>{teacher.classroomName}</td>
