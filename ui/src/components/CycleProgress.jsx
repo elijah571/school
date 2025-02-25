@@ -10,7 +10,7 @@ export const CycleProgress = () => {
         value={percentage} 
         text={`${percentage}%`} 
         styles={buildStyles({
-          textColor: "#000",        // Black text for better contrast
+          textColor: "#fff",        // Black text for better contrast
           pathColor: "#4CAF50",     // Green for the progress (80%)
           trailColor: "#fff",       // White for the remaining portion (20%)
           textSize: '24px',         // Slightly larger text for better visibility
