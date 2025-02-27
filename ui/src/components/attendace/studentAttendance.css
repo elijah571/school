@@ -1,0 +1,81 @@
+.attendace-summary {
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    border-radius: 8px; 
+    margin-bottom: 30px;
+    padding: 14px 8px;
+}
+.attendace-div{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+    height: 100%;
+}
+
+.attndace-performace, 
+.total-classes, 
+.present, 
+.absent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5px;
+    color: #fff;
+    border-radius: 8px;
+    /* padding: 10px 40px; */
+    transition: all 0.3s;
+}
+h5{
+    font-size: 15px;
+}
+/* Hover effect */
+.attndace-performace:hover, 
+.total-classes:hover, 
+.present:hover, 
+.absent:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  
+}
+
+.attndace-performace{
+    background-color:#333;
+    
+}
+.attndace-performace > div{
+    padding: 10px;
+}
+
+.punctual{
+    color: #fff;
+    text-align: left;
+    margin-top: 10px;
+}
+.total-classes{
+    background-color: rgb(8, 163, 163);
+   
+}
+.clock{
+    background-color: #fff;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+.calender{
+    color: aqua;
+  
+}
+.present{
+    background-color: green;
+}
+.present .calender{
+    color: green;
+}
+.absent {
+    background-color: red;
+}
+.absent .calender{
+    color: red;
+}

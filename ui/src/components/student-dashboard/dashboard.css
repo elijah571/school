@@ -1,0 +1,252 @@
+/* For the sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 100%;
+  background-color: #333;
+  color: white;
+  padding: 15px;
+}
+
+.sidebar h3 {
+  color: #fff;
+}
+
+.sidebar-toggle {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  cursor: pointer;
+}
+
+/* Add any other styling for the sidebar or other elements */
+.view-attendance-btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  margin-top: 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.view-attendance-btn:hover {
+  background-color: #45a049;
+}
+
+
+
+/* General container styling */
+.dashboard-container {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow-x: auto; /* Prevents horizontal scrolling */
+}
+
+.dashboard-title {
+  color: #333;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+/* Classroom card styling */
+.classroom-card {
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  background-color: #fff;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Classroom name */
+.classroom-name {
+  color: #2c3e50;
+  font-size: 18px;
+  margin-bottom: 10px;
+  
+}
+
+/* Classroom details */
+.class-details {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  background-color: #ffffff;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Adds a soft shadow */
+  flex-wrap: wrap; /* Allows wrapping on smaller screens */
+}
+
+h3 {
+  font-size: 14px;
+}
+
+/* Classroom logo */
+.class-logo {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Classroom details section */
+.class-detail {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+  padding: 5px;
+  flex-wrap: wrap; /* Ensures proper layout on smaller screens */
+}
+
+.class-detail div {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 5px;
+  text-align: center;
+}
+
+.class-detail span {
+  font-size: small;
+}
+
+/* Classroom image */
+.class-details img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 15px;
+}
+
+/* Classroom title */
+.class-details h3 {
+  color: #333;
+  margin: 5px 0;
+}
+
+/* Classroom description */
+.class-details p {
+  font-size: 14px;
+  color: #666;
+  margin: 0;
+}
+
+/* Responsive Table */
+.students-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  min-width: 600px; /* Ensures the table is scrollable if needed */
+}
+
+/* Make table scrollable on smaller screens */
+.students-table-wrapper {
+  overflow-x: auto;
+  width: 100%;
+}
+
+.students-table th {
+  background-color: green;
+  color: white;
+  padding: 10px;
+  text-align: left;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.students-table td {
+  padding: 8px;
+  border: 1px solid #ddd;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+/* Loading, error, and empty states */
+.loading-text,
+.error-text,
+.no-students-text,
+.no-classrooms-text {
+  text-align: center;
+  font-weight: bold;
+  color: red;
+  font-size: 14px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .dashboard-container {
+    padding: 10px;
+  }
+
+  .dashboard-title {
+    font-size: 16px;
+  }
+
+  .classroom-card {
+    padding: 10px;
+  }
+
+  .class-details {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .class-details img {
+    margin: 0 auto 10px;
+  }
+
+  .class-detail {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .students-table th,
+  .students-table td {
+    font-size: 13px;
+    padding: 6px;
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboard-title {
+    font-size: 14px;
+  }
+
+  .classroom-name {
+    font-size: 15px;
+  }
+
+  .class-details {
+    flex-direction: column;
+    text-align: center;
+    padding: 10px;
+  }
+
+  .class-details img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .class-detail {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .students-table-wrapper {
+    overflow-x: auto; /* Ensures the table remains scrollable */
+  }
+
+  .students-table th,
+  .students-table td {
+    font-size: 12px;
+    padding: 5px;
+  }
+}

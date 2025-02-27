@@ -1,0 +1,131 @@
+/* Container styling */
+.assign-teacher-container {
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #f1f1f1;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    text-align: center;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Header styling */
+  .assign-teacher-container h2 {
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    color: #333;
+  }
+  
+  /* Form styling */
+  .assign-teacher-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .assign-teacher-form select,
+  .assign-teacher-form input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .assign-teacher-form button {
+    padding: 10px;
+    background-color: #28a745;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .assign-teacher-form button:hover {
+    background-color: #218838;
+  }
+  
+  /* Teacher details styling */
+  .teacher-details {
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    text-align: left;
+    font-size: 14px;
+  }
+  
+  .teacher-details p {
+    margin: 5px 0;
+  }
+  /* Table styling for teachers, similar to the students table */
+.teachers-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #f9f9f9;  /* Light background */
+  margin-top: 20px;
+}
+
+.teachers-table th,
+.teachers-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.teachers-table th {
+  background-color: #28a745; /* Blue header */
+  color: #fff;
+  font-weight: bold;
+}
+
+.teachers-table tbody tr:nth-child(even) {
+  background-color: #f2f2f2; /* Alternating row color */
+}
+
+.teachers-table tbody tr:hover {
+  background-color: #e6f7ff; /* Hover effect */
+}
+
+/* Responsive styling for tablets */
+@media (max-width: 768px) {
+  .teachers-table th,
+  .teachers-table td {
+    padding: 8px;
+    font-size: 13px;
+  }
+}
+
+/* Responsive styling for mobile */
+@media (max-width: 480px) {
+  .teachers-table th,
+  .teachers-table td {
+    padding: 6px;
+    font-size: 11px;
+  }
+}
+
+  /* Responsive styling */
+  @media (max-width: 480px) {
+    .assign-teacher-container {
+      padding: 15px;
+    }
+    .assign-teacher-form select,
+    .assign-teacher-form input {
+      padding: 8px;
+      font-size: 13px;
+    }
+    .assign-teacher-form button {
+      padding: 8px;
+      font-size: 14px;
+    }
+    .teacher-details {
+      font-size: 12px;
+    }
+  }
+  

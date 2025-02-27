@@ -1,0 +1,116 @@
+
+  h1, h2 {
+    font-size: 16px;
+    text-align: center;
+    color: #333;
+    margin-top: 30px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #28a745;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #28a745;
+  }
+  
+  p {
+    font-size: 14px;
+    color: #555;
+  }
+  
+  /* Form Container */
+  form {
+    background-color: #fff;
+    padding: 20px;
+    max-width: 600px;
+    margin: 20px auto;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+  
+  form div {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+  }
+  
+  input, select, textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  
+  select {
+    cursor: pointer;
+  }
+  
+  textarea {
+    resize: vertical;
+    min-height: 100px;
+  }
+  
+  input[type="number"] {
+    max-width: 100px;
+  }
+  
+  /* Subject Sections */
+  form h3 {
+    color: #28a745;
+  }
+  
+  button[type="button"] {
+    background-color: #28a745;
+    margin-top: 10px;
+  }
+  
+  button[type="button"]:hover {
+    background-color: #218838;
+  }
+  
+  /* Reports Section */
+  .reports-container {
+    margin: 20px;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+  
+  .report-item {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+  }
+  
+  .report-item h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #333;
+  }
+  
+  .report-item p {
+    margin: 5px 0;
+  }
+  
+  /* Loading State */
+  .loading {
+    text-align: center;
+    font-size: 18px;
+    color: #28a745;
+  }
+  
