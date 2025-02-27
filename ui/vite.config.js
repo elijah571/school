@@ -11,6 +11,7 @@ export default defineConfig({
         changeOrigin: true,  // This is useful if the backend server is on a different origin
       
       },
+      
     },
   },
 });
