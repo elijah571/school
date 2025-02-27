@@ -1,6 +1,6 @@
 import './navbar.css';
 import logo from '../../image/logo.png'
-import { FaTachometerAlt, FaMapMarkerAlt, FaFileAlt, FaUsers,  FaSignOutAlt } from "react-icons/fa";
+import { FaTachometerAlt, FaMapMarkerAlt, FaFileAlt,   FaSignOutAlt } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import { useDispatch, useSelector } from "react-redux";
@@ -56,15 +56,7 @@ export const Navbar = () => {
           <h3>Reports</h3>
         </Link>
         {/* News */}
-        <Link to={'/news'}>
-          <span><FaFileAlt /></span>
-          <h3>News & Bulletins</h3>
-        </Link>
-        {/* Alumni */}
-        <Link to={'/alumni-bodies'}>
-          <span><FaUsers /></span>
-          <h3>Alumni Bodies</h3>
-        </Link>
+       
 
      
         {/* Login/Logout Button */}

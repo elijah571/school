@@ -132,7 +132,7 @@ const AdminDashboard = () => {
 
       {showTeacherNav && (
         <nav className="admin-dashboard-nav">
-          <Link to="/admin/create-classroom">Create Classroom</Link>
+        
           <Link to="/admin/assign-teacher">Assign Teacher</Link>
         </nav>
       )}
@@ -193,7 +193,6 @@ const AdminDashboard = () => {
 
       {showStudentNav && (
         <nav className="admin-dashboard-nav">
-          <Link to="/admin/create-classroom">Create Classroom</Link>
           <Link to="/admin/assign-students">Assign Students</Link>
         </nav>
       )}
