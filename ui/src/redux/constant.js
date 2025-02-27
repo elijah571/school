@@ -1,5 +1,7 @@
 // Define the base URL for the backend server
- export const BASE_URL = ""
+ export const BASE_URL =  import.meta.env.PROD
+ ? "https://school-backend-umg3.onrender.com"  // Production URL
+ : "";  // Empty for local proxy
 
  // Define the API endpoint URLs
  export const ADMIN_URL = "/api/admin";
