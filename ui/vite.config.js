@@ -7,7 +7,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'http://localhost:3000',  // Target backend server
+        target: "https://school-backend-umg3.onrender.com",  // Target backend server
         changeOrigin: true,  // This is useful if the backend server is on a different origin
       
       },
