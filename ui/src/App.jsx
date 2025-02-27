@@ -12,6 +12,7 @@ import { GetAllAttendance } from "./components/attendace/GetAllAttendance";
 import { StudentDetails } from "./pages/student/StudentDetails";
 import { GetStudentAttendance } from "./components/attendace/GetStudentAttendace";
 import { TeacherDetails } from "./components/teacher/TeacherDetails";
+import { News } from "./pages/news/News";
 
 const App = () => {
   return (
@@ -21,6 +22,7 @@ const App = () => {
         <Route path="/" element={<Dashboard />} />
         <Route path="/reports" element={<Report />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/news" element={<News/>}/>
         <Route path="/attendance" element={<GetAllAttendance />} />
 
         {/* Teacher Routes */}

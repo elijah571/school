@@ -1,65 +1,83 @@
-/* teacherDetails.css */
-.teacher-details-container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #f9f9f9;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    border-radius: 8px;
-    font-family: Arial, sans-serif;
+.teacher-details-card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 15px;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 .teacher-title {
-    text-align: center;
-    color: #333;
-    font-size: 2rem;
-    margin-bottom: 20px;
-}
-
-.loading-text,
-.error-text,
-.no-teacher-text {
-    text-align: center;
-    font-size: 1.2rem;
-    color: #888;
-}
-
-.error-text {
-    color: #d9534f;
-}
-
-.no-teacher-text {
-    color: #5bc0de;
-}
-
-.teacher-details-table-wrapper {
-    overflow-x: auto;
-}
-
-.teacher-details-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-}
-
-.teacher-details-table th,
-.teacher-details-table td {
-    text-align: left;
-    padding: 12px 15px;
-    border: 1px solid #ddd;
-}
-
-.teacher-details-table th {
-    background-color: green;
-    color: #fff;
+    font-size: 20px;
     font-weight: bold;
+    margin-bottom: 15px;
+    color: #333;
+    text-align: left;
 }
 
-.teacher-details-table tr:nth-child(even) {
-    background-color: #f2f2f2;
+.teacher-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
 }
 
-.teacher-details-table tr:hover {
-    background-color: #e0e0e0;
-    transition: background-color 0.3s ease;
+.info-item {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+    min-width: 120px;
+    box-sizing: border-box;
+}
+
+.info-title {
+    font-size: 16px;
+    color: #555;
+    margin: 0;
+    text-align: center;
+}
+
+.info-detail {
+    font-size: 14px;
+    color: #000;
+    margin: 3px 0 0;
+    text-align: center;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .teacher-details-card {
+        padding: 10px;
+    }
+
+    .teacher-title {
+        font-size: 18px;
+    }
+
+    .info-title {
+        font-size: 14px;
+    }
+
+    .info-detail {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .teacher-details-card {
+        padding: 8px;
+        margin: 10px;
+    }
+
+    .teacher-title {
+        font-size: 16px;
+    }
+
+    .info-title {
+        font-size: 12px;
+    }
+
+    .info-detail {
+        font-size: 10px;
+    }
 }

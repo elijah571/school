@@ -6,7 +6,7 @@ export const AttendanceList = () => {
   const { data: classrooms, isLoading: isClassroomsLoading, isError: isClassroomsError } = useGetAllClassroomsQuery();
 
   // Logging classroom data
-  console.log("Classrooms data:", classrooms);
+  // console.log("Classrooms data:", classrooms);
 
   // Loading and error handling for classrooms
   if (isClassroomsLoading) return <p>Loading classrooms...</p>;
@@ -40,7 +40,7 @@ const AttendanceForClassroom = ({ classroomId }) => {
   const { data: attendanceData, isLoading, isError } = useGetAttendanceForClassroomQuery(classroomId);
 
   // Logging attendance data
-  console.log(`Attendance data for classroom ${classroomId}:`, attendanceData);
+  // console.log(`Attendance data for classroom ${classroomId}:`, attendanceData);
 
   // Loading and error handling
   if (isLoading) return <p>Loading attendance data...</p>;
@@ -52,7 +52,7 @@ const AttendanceForClassroom = ({ classroomId }) => {
     : [];
 
   // Logging attendance records to check if they are being correctly fetched
-  console.log("Attendance records:", attendanceRecords);
+  // console.log("Attendance records:", attendanceRecords);
 
   return (
     <div>
