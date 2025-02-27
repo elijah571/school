@@ -142,7 +142,6 @@ export const getAttendanceWithStudentInfo = async (req, res) => {
         res.status(500).json({ message: "Internal server error", error: error.message });
     }
 };
-
 // Get Attendance for a specific student in a classroom
 export const getSingleStudentAttendance = async (req, res) => {
     try {
@@ -152,10 +151,15 @@ export const getSingleStudentAttendance = async (req, res) => {
         const attendanceRecords = await Attendance.find({
             classroomId: classroomId,
             'attendanceStatus.student': studentId // Ensure student ID exists in attendanceStatus
-        }).populate({
-            path: 'attendanceStatus.student', // Populate the student details
         })
-        .populate('classroomId', 'name') // Populate classroom details
+        .populate({
+            path: 'attendanceStatus.student', // Populate the student details
+            select: 'name email'  // Select specific fields if needed
+        })
+        .populate({
+            path: 'classroomId', // Populate classroom details
+            select: 'name grade' // Select specific fields if needed
+        })
         .sort({ date: -1 }); // Sort by date in descending order
 
         if (!attendanceRecords || attendanceRecords.length === 0) {
@@ -163,12 +167,19 @@ export const getSingleStudentAttendance = async (req, res) => {
         }
 
         // Extract only the student's attendance from each record
-        const studentAttendance = attendanceRecords.map(record => ({
-            date: record.date,
-            checkIn: record.checkIn || "N/A",
-            checkOut: record.checkOut || "N/A",
-            status: record.attendanceStatus.find(status => status.student._id.toString() === studentId)?.status || "N/A"
-        }));
+        const studentAttendance = attendanceRecords.map(record => {
+            // Find the attendance status for the specific student
+            const studentRecord = record.attendanceStatus.find(status => status.student._id.toString() === studentId);
+
+            return {
+                date: record.date,
+                checkIn: studentRecord?.checkIn || "N/A",
+                checkOut: studentRecord?.checkOut || "N/A",
+                status: studentRecord?.status || "N/A",
+                studentName: studentRecord?.student?.name || "Unknown",
+                classroomName: record.classroomId?.name || "Unknown"
+            };
+        });
 
         res.status(200).json({
             message: "Student attendance records fetched successfully",
@@ -179,6 +190,7 @@ export const getSingleStudentAttendance = async (req, res) => {
         res.status(500).json({ message: "Internal server error", error: error.message });
     }
 };
+
 
 
 // Delete Attendance for a specific classroom
